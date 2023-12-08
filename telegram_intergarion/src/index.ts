@@ -22,6 +22,7 @@ export default new botpress.Integration({
 
   handler: async ({ req, client }) => {
     const data = JSON.parse(req.body ?? "");
+    console.log(data, client);
 
     const conversationId = data?.message?.chat?.id;
     const userId = data?.message?.from?.id;
@@ -54,10 +55,11 @@ export default new botpress.Integration({
     group: {
       messages: {
         text: async ({ payload, ctx, conversation, ack }) => {
+          console.log(ctx)
           const client = new Telegraf(ctx.configuration.botToken);
           const message = await client.telegram.sendMessage(
             conversation.tags["telegramtest:id"]!,
-            payload.text
+            `${ctx.configuration.appender} ${payload.text}`
           );
           await ack({ tags: { "telegramtest:id": `${message.message_id}` } });
         },

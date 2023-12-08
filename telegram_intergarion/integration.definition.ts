@@ -8,6 +8,7 @@ export default new IntegrationDefinition({
   configuration: {
     schema: z.object({
       botToken: z.string(),
+      appender: z.string(),
     }),
   },
   channels: {
