@@ -1,5 +1,6 @@
 import * as botpress from ".botpress";
 import { Telegraf } from "telegraf";
+import getUuidByString from "uuid-by-string";
 
 console.info("starting integration");
 
@@ -22,7 +23,7 @@ export default new botpress.Integration({
 
   handler: async ({ req, client }) => {
     const data = JSON.parse(req.body ?? "");
-    console.log(data, client);
+    console.log("from user: ", data);
 
     const conversationId = data?.message?.chat?.id;
     const userId = data?.message?.from?.id;
@@ -41,6 +42,27 @@ export default new botpress.Integration({
       tags: { "telegramtest:id": `${userId}` },
     });
 
+    await client.setState({
+      type: "user",
+      id: user.id,
+      name: "user",
+      payload: {
+        remindAt: new Date().toISOString(),
+      },
+    });
+
+    const { state } = await client.getState({
+      type: "user",
+      id: user.id,
+      name: "user",
+    });
+    console.log("🚀 ~ file: index.ts:38 ~ handler: ~ state:", state);
+
+    if (data.message.text === "delete") {
+      await client.deleteConversation({ id: conversation.id });
+      return;
+    }
+
     await client.createMessage({
       tags: { "telegramtest:id": `${messageId}` },
       type: "text",
@@ -55,7 +77,7 @@ export default new botpress.Integration({
     group: {
       messages: {
         text: async ({ payload, ctx, conversation, ack }) => {
-          console.log(ctx)
+          console.log("from bot:", payload);
           const client = new Telegraf(ctx.configuration.botToken);
           const message = await client.telegram.sendMessage(
             conversation.tags["telegramtest:id"]!,

@@ -8,7 +8,7 @@ const bot = new Bot({
       enabled: true,
       config: {
         botToken: "6875692446:AAGbeU9IpGw06dcgf8L1M8mXOFBnBYQKt-I",
-        appender:"telegrambot:"
+        appender: "telegrambot:",
       },
     }),
   },
