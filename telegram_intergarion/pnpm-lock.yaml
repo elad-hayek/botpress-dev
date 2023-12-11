@@ -11,6 +11,9 @@ dependencies:
   '@botpress/sdk':
     specifier: 0.5.2
     version: 0.5.2
+  axios:
+    specifier: ^1.6.2
+    version: 1.6.2
   telegraf:
     specifier: ^4.15.0
     version: 4.15.0
@@ -130,6 +133,16 @@ packages:
 
   /axios@1.2.5:
     resolution: {integrity: sha512-9pU/8mmjSSOb4CXVsvGIevN+MlO/t9OWtKadTaLuN85Gge3HGorUckgp8A/2FH4V4hJ7JuQ3LIeI7KAV9ITZrQ==}
+    dependencies:
+      follow-redirects: 1.15.3
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /axios@1.6.2:
+    resolution: {integrity: sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==}
     dependencies:
       follow-redirects: 1.15.3
       form-data: 4.0.0

@@ -1,6 +1,7 @@
 import * as botpress from ".botpress";
 import { Telegraf } from "telegraf";
 import getUuidByString from "uuid-by-string";
+import { startListener } from "./api";
 
 console.info("starting integration");
 
@@ -14,6 +15,7 @@ export default new botpress.Integration({
   register: async ({ webhookUrl, ctx }) => {
     const telegraf = new Telegraf(ctx.configuration.botToken);
     await telegraf.telegram.setWebhook(webhookUrl);
+    startListener()
   },
 
   unregister: async ({ ctx }) => {
