@@ -1,4 +1,3 @@
-const { ok } = require("assert");
 const express = require("express");
 const fs = require("fs");
 
@@ -30,20 +29,17 @@ app.get("/state/:userId", (req, res) => {
 });
 
 app.post("/state/:userId", (req, res) => {
-  fs.readFile(JSON_PATH, (err, jsonData) => {
-    if (err) {
-      console.log("Error reading", err);
-      return res.status(500).send(err);
-    }
 
-    var data = JSON.parse(jsonData);
+  var buffer = fs.readFileSync(JSON_PATH)
+  var data = JSON.parse(buffer);
 
-    var index = data.indexOf((x) => x.id === req.params.userId);
-    if (index === -1) data.push({ id: req.params.userId, ...req.body });
-    else data.splice(index, 1, { id: req.params.userId, ...req.body });
+  var index = data.findIndex((x) => x.id === req.params.userId);
+  if (index === -1) data.push({ id: req.params.userId, ...req.body });
+  else data.splice(index, 1, { id: req.params.userId, ...req.body });
 
-    
-    fs.writeFile(JSON_PATH, new Uint8Array(fromBuffer(data)));
-    res.sendStatus(200);
+  fs.writeFileSync(JSON_PATH, JSON.stringify(data), (err)=>{
+    console.log(err);
   });
+  res.sendStatus(200);
+      
 });
