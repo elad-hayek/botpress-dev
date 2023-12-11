@@ -42,22 +42,6 @@ export default new botpress.Integration({
       tags: { "telegramtest:id": `${userId}` },
     });
 
-    await client.setState({
-      type: "user",
-      id: user.id,
-      name: "user",
-      payload: {
-        remindAt: new Date().toISOString(),
-      },
-    });
-
-    const { state } = await client.getState({
-      type: "user",
-      id: user.id,
-      name: "user",
-    });
-    console.log("🚀 ~ file: index.ts:38 ~ handler: ~ state:", state);
-
     if (data.message.text === "delete") {
       await client.deleteConversation({ id: conversation.id });
       return;
