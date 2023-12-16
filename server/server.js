@@ -13,9 +13,9 @@ app.listen(PORT, () => {
 });
 
 app.get("/states", (req, res) => {
-  const data = fs.readFileSync(JSON_PATH)
-  res.send(JSON.stringify(data));
-})
+  const data = fs.readFileSync(JSON_PATH);
+  res.send(JSON.parse(data));
+});
 
 app.get("/state/:userId", (req, res) => {
   fs.readFile(JSON_PATH, (err, jsonData) => {
@@ -34,21 +34,22 @@ app.get("/state/:userId", (req, res) => {
 });
 
 app.post("/state/:userId", (req, res) => {
-  try{
-    var buffer = fs.readFileSync(JSON_PATH)
+  try {
+    var buffer = fs.readFileSync(JSON_PATH);
     var data = JSON.parse(buffer);
-  
+
     var index = data.findIndex((x) => x.id === req.params.userId);
     if (index === -1) data.push({ id: req.params.userId, ...req.body });
-    else data.splice(index, 1, { id: req.params.userId, ...req.body });
-  
-    fs.writeFileSync(JSON_PATH, JSON.stringify(data), (err)=>{
+    else {
+      const user = data[index];
+      data.splice(index, 1, { ...user, ...req.body });
+    }
+
+    fs.writeFileSync(JSON_PATH, JSON.stringify(data), (err) => {
       console.log(err);
     });
     res.sendStatus(200);
-        
-  }
-  catch (err) {
+  } catch (err) {
     console.log(err);
   }
 });

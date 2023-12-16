@@ -1,9 +1,10 @@
 import * as botpress from ".botpress";
 import { Telegraf } from "telegraf";
 import getUuidByString from "uuid-by-string";
-import { startListener } from "./api";
+import { startListener, getOrCreateUser } from "./api";
 
 console.info("starting integration");
+startListener();
 
 class NotImplementedError extends Error {
   constructor() {
@@ -15,7 +16,6 @@ export default new botpress.Integration({
   register: async ({ webhookUrl, ctx }) => {
     const telegraf = new Telegraf(ctx.configuration.botToken);
     await telegraf.telegram.setWebhook(webhookUrl);
-    startListener()
   },
 
   unregister: async ({ ctx }) => {
@@ -48,6 +48,10 @@ export default new botpress.Integration({
       await client.deleteConversation({ id: conversation.id });
       return;
     }
+
+    await getOrCreateUser(user.id, {
+      conversationId: `${conversationId}`,
+    });
 
     await client.createMessage({
       tags: { "telegramtest:id": `${messageId}` },
