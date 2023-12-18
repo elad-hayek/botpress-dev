@@ -4,7 +4,6 @@ import getUuidByString from "uuid-by-string";
 import { startListener, getOrCreateUser } from "./api";
 
 console.info("starting integration");
-startListener();
 
 class NotImplementedError extends Error {
   constructor() {

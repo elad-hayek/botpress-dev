@@ -5,7 +5,7 @@ import { randomUUID } from "crypto";
 import { Telegraf } from "telegraf";
 
 // const API_BASE = " http://localhost:3000";
-const API_BASE = "https://long-buttons-lie.loca.lt";
+const API_BASE = "https://beige-beds-smell.loca.lt";
 
 export const startListener = async () => {
   console.log("start listening");
