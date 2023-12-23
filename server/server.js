@@ -35,6 +35,7 @@ app.get("/state/:userId", (req, res) => {
 
 app.post("/state/:userId", (req, res) => {
   try {
+    console.log("got request", req.body);
     var buffer = fs.readFileSync(JSON_PATH);
     var data = JSON.parse(buffer);
 

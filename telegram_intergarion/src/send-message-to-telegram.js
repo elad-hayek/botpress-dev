@@ -1,33 +1,19 @@
 const { Telegraf } = require("telegraf");
 const axios = require("axios");
 const getUuidByString = require("uuid-by-string");
-const  { Client } = require("@botpress/client");
+const { Client } = require("@botpress/client");
+const { randomUUID } = require("crypto");
 
-const API_BASE = "https://beige-beds-smell.loca.lt";
-const telegraf =  new Telegraf("6875692446:AAGbeU9IpGw06dcgf8L1M8mXOFBnBYQKt-I");
+const API_BASE = "https://sour-badgers-dream.loca.lt";
+const telegraf = new Telegraf("6875692446:AAGbeU9IpGw06dcgf8L1M8mXOFBnBYQKt-I");
 
 const botpressClient = new Client({
-  token: 'bp_pat_3Z0lsrrE4QRk3kjHweFXCJzsEFiCLkGtZxwu',
-  headers: {'x-bot-id': 'b13d5719-396e-4c6c-998c-f19d25457c4b'}
+  token: "bp_pat_UMuca9pc0BisBmMMeOILxPafDf0IoLZO3hov",
+  headers: {
+    "x-bot-id": "b13d5719-396e-4c6c-998c-f19d25457c4b",
+    "x-integration-id": "intver_01HGK80ZN36R1ZM0Z4PYT0P4Q9",
+  },
 });
-
-const sendMessage = async (user) => {
-  // const message = await telegraf.telegram.sendMessage(
-  //   user.conversationId,
-  //   "sent automatically"
-  // );
-
-  const response = await botpressClient.createMessage({
-      type: "text",
-      userId: user.id,
-      conversationId: user.conversationId,
-      payload: { text: "hello again" },
-      schedule:{ dateTime: user.remindAt},
-      // tags: { "telegramtest:id": `${randomUUID()}` },
-  })
-
-  await log("🚀 ~ file: api.ts:58 ~ start ~ message:", response);
-};
 
 const getOrCreateUser = async (userId, body) => {
   const user = await axios.get(`${API_BASE}/state/${userId}`);
@@ -62,9 +48,50 @@ const log = (text, any) => {
   return promise;
 };
 
-const intervalId = setInterval(async () => {
-  await log("Starting interval --------------------------------");
-  await listener();
-}, 5 * 1000);
+// const intervalId = setInterval(async () => {
+//   await log("Starting interval --------------------------------");
+//   await listener();
+// }, 5 * 1000);
 
-setTimeout(() => clearInterval(intervalId), 5 * 60 * 1000);
+// setTimeout(() => clearInterval(intervalId), 5 * 60 * 1000);
+
+const sendMessage = async (user) => {
+  // const message = await telegraf.telegram.sendMessage(
+  //   user.conversationId,
+  //   "sent automatically"
+  // );
+
+  const currentDate = new Date();
+  currentDate.setMinutes(currentDate.getMinutes() + 1);
+
+  const response = await botpressClient.createMessage({
+    type: "text",
+    // userId: "b446dfd9-90a3-46bd-912f-0a77f270ba3e",
+    userId: "0e797e81-eebc-4785-88bd-3a4e0de6ac9b",
+    conversationId: "5bececa5-632a-4b2a-85a8-e379d546ad63",
+    payload: { text: "remind me" },
+    // schedule: { dateTime: currentDate.toISOString() },
+    schedule: { delay: 3000 },
+    tags: { "telegramtest:id": "" },
+  });
+
+  await log(response.message);
+};
+
+const getMessages = async () => {
+  const response = await botpressClient.listMessages({
+    conversationId: "5bececa5-632a-4b2a-85a8-e379d546ad63",
+  });
+
+  await log(response.messages);
+};
+
+const getUsers = async () => {
+  const response = await botpressClient.listUsers();
+
+  await log(response.users);
+};
+
+// getMessages();
+// getUsers()
+sendMessage();

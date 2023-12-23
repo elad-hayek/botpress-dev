@@ -1,1 +1,276 @@
-[{"id":"0e797e81-eebc-4785-88bd-3a4e0de6ac9b","conversationId":"5bececa5-632a-4b2a-85a8-e379d546ad63","remindAt":"2023-12-18T18:09:46.312Z","botToken":"b13d5719-396e-4c6c-998c-f19d25457c4b"}]
+[
+  {
+    "id": "0e797e81-eebc-4785-88bd-3a4e0de6ac9b",
+    "conversationId": "5bececa5-632a-4b2a-85a8-e379d546ad63",
+    "remindAt": "2023-12-23T16:49:20.537Z",
+    "botToken": "b13d5719-396e-4c6c-998c-f19d25457c4b",
+    "all": {
+      "id": "68b6607c-cf4c-4e03-bcb1-a1e834aee0a4",
+      "type": "text",
+      "channel": "group",
+      "userId": "0e797e81-eebc-4785-88bd-3a4e0de6ac9b",
+      "direction": "incoming",
+      "payload": { "text": "remind me in 2 hours" },
+      "botId": "b13d5719-396e-4c6c-998c-f19d25457c4b",
+      "createdOn": "2023-12-23T14:49:19.706Z",
+      "conversationId": "5bececa5-632a-4b2a-85a8-e379d546ad63",
+      "preview": "remind me in 2 hours",
+      "state": {
+        "__stacktrace": [
+          {
+            "flow": "wf-89c5354646",
+            "node": "nd-11f13f5b48",
+            "card": "ins-f99b719c99"
+          }
+        ],
+        "context": {
+          "currentFlow": "wf-89c5354646",
+          "currentNode": "nd-11f13f5b48",
+          "previousFlow": "wf-main",
+          "previousNode": "nd-4bdcedd070",
+          "previousCard": "ins-a72438454b",
+          "jumpPoints": [
+            {
+              "flow": "wf-main",
+              "node": "nd-be42843755",
+              "card": "ins-a72438454b"
+            }
+          ],
+          "currentCard": "ins-56c8320851",
+          "queue": [
+            {
+              "id": "ins-c2038f0b9c",
+              "type": "content",
+              "content": {
+                "type": "text",
+                "text": {
+                  "valueType": "dynamic",
+                  "dynamicValue": "@workflow.response ",
+                  "staticValue": ""
+                },
+                "typing": { "valueType": "static", "staticValue": true }
+              },
+              "nodeId": "nd-068587f916"
+            }
+          ]
+        },
+        "session": {
+          "workflows_executions": [
+            {
+              "execution_id": "731b5411-7fd1-4ec5-a84f-7d4ee355bf74",
+              "caller": { "type": "entry" },
+              "started_at": "2023-12-22T16:43:50.545Z",
+              "variable_values": { "response": "" },
+              "workflow_id": "wf-main"
+            },
+            {
+              "workflow_id": "wf-89c5354646",
+              "variable_values": {
+                "response": "you understand and you will remind him in the time he wanted"
+              },
+              "caller": {
+                "type": "workflow",
+                "execution_id": "731b5411-7fd1-4ec5-a84f-7d4ee355bf74"
+              },
+              "execution_id": "8952f603-e53b-40ce-9d81-35b219acf755",
+              "started_at": "2023-12-22T16:43:51.698Z"
+            }
+          ],
+          "current_workflow": {
+            "workflow_id": "wf-89c5354646",
+            "variable_values": {
+              "response": "you understand and you will remind him in the time he wanted"
+            },
+            "caller": {
+              "type": "workflow",
+              "execution_id": "731b5411-7fd1-4ec5-a84f-7d4ee355bf74"
+            },
+            "execution_id": "8952f603-e53b-40ce-9d81-35b219acf755",
+            "started_at": "2023-12-22T16:43:51.698Z"
+          },
+          "history": [
+            {
+              "id": "a75ad985-0a88-4633-922f-7f6610937825",
+              "sender": "bot",
+              "confidence": 1,
+              "date": "2023-12-23T14:36:14.390Z",
+              "type": "text",
+              "preview": "Great! Let's get started on creating the document. ",
+              "options": []
+            },
+            {
+              "id": "319a0959-b6d7-4c8d-905f-58a0cee7f21c",
+              "sender": "user",
+              "date": "2023-12-23T14:37:38.408Z",
+              "preview": "hello",
+              "type": "text"
+            },
+            {
+              "id": "dbc1e2e4-9460-4501-a844-43be118a7318",
+              "sender": "bot",
+              "confidence": 1,
+              "date": "2023-12-23T14:37:39.950Z",
+              "type": "text",
+              "preview": "Great! Let's get started on creating the document. ",
+              "options": []
+            },
+            {
+              "id": "c4d6d98e-66bb-45ce-bedb-f532e7f5b197",
+              "sender": "user",
+              "date": "2023-12-23T14:49:06.710Z",
+              "preview": "hi",
+              "type": "text"
+            },
+            {
+              "id": "5c74ea84-041c-4acb-a618-9da8aecdc117",
+              "sender": "bot",
+              "confidence": 1,
+              "date": "2023-12-23T14:49:08.278Z",
+              "type": "text",
+              "preview": "Great! Let's get started on creating the document. ",
+              "options": []
+            },
+            {
+              "id": "6249aed3-d64d-4bfa-84a9-3af67393a99d",
+              "sender": "user",
+              "date": "2023-12-23T14:49:19.707Z",
+              "preview": "remind me in 2 hours",
+              "type": "text"
+            },
+            {
+              "id": "2541973f-6af6-4b0c-978f-ee91495a168a",
+              "sender": "bot",
+              "confidence": 1,
+              "date": "2023-12-23T14:49:20.176Z",
+              "type": "text",
+              "preview": "changed to intent",
+              "options": []
+            }
+          ],
+          "current_execution_id": "8952f603-e53b-40ce-9d81-35b219acf755"
+        },
+        "user": {
+          "goal": "create a doc",
+          "name": "",
+          "date": "2023-12-23T14:49:20.536Z",
+          "remindAt": "2023-12-23T16:49:20.537Z",
+          "minutesToRemind": 120
+        },
+        "bot": { "api": "https://clever-spoons-greet.loca.lt" },
+        "configVariables": {},
+        "agentVariables": {
+          "SummaryAgent": {
+            "bot": {},
+            "conversation": {
+              "summary": "The user initiated the conversation by saying 'hi' and the bot responded by saying 'Great! Let's get started on creating the document.' The user requested a reminder in 2 hours, which the bot acknowledged and confirmed to understand.",
+              "transcript": "bot: Great! Let's get started on creating the document. \nuser: hello\nbot: Great! Let's get started on creating the document. \nuser: hello\nbot: Great! Let's get started on creating the document. \nuser: hello\nbot: Great! Let's get started on creating the document. \nuser: hi\nbot: Great! Let's get started on creating the document. \nuser: remind me in 2 hours\nbot: changed to intent\n"
+            },
+            "executions": {},
+            "user": {},
+            "turn": {
+              "lines": [
+                "{\"sender\":\"user\",\"message\":\"remind me in 2 hours\"}",
+                "{\"sender\":\"bot\",\"message\":\"changed to intent\"}"
+              ]
+            }
+          },
+          "KnowledgeAgent": {
+            "bot": {},
+            "conversation": {},
+            "executions": {},
+            "user": {},
+            "turn": { "responded": false, "answer": null, "citations": [] }
+          }
+        }
+      },
+      "messageId": "6249aed3-d64d-4bfa-84a9-3af67393a99d",
+      "flags": {},
+      "nlu": {
+        "errored": false,
+        "openbook_model_id": "8592b49ba679b7d7.d208c1c3dae45987",
+        "intents": [
+          {
+            "id": "int-9bb52060a6",
+            "text": "Execute action: call_later",
+            "topic_id": "tpc-global",
+            "topic_title": "Global",
+            "topic_desc": "This topic is about general questions and answers that a user can ask",
+            "subtopic_id": "base-intents",
+            "subtopic_title": "Base Intents",
+            "subtopic_desc": "Base actions the user can do with the chatbot",
+            "attachments": ["intent://int-9bb52060a6"],
+            "confidence": 0.9920293143506003
+          }
+        ],
+        "top_facts": [
+          {
+            "id": "int-9bb52060a6",
+            "text": "Execute action: call_later",
+            "topic_id": "tpc-global",
+            "topic_title": "Global",
+            "topic_desc": "This topic is about general questions and answers that a user can ask",
+            "subtopic_id": "base-intents",
+            "subtopic_title": "Base Intents",
+            "subtopic_desc": "Base actions the user can do with the chatbot",
+            "attachments": ["intent://int-9bb52060a6"]
+          },
+          {
+            "id": "int-cancel",
+            "text": "Execute action: cancel",
+            "topic_id": "tpc-global",
+            "topic_title": "Global",
+            "topic_desc": "This topic is about general questions and answers that a user can ask",
+            "subtopic_id": "base-intents",
+            "subtopic_title": "Base Intents",
+            "subtopic_desc": "Base actions the user can do with the chatbot",
+            "attachments": ["intent://int-cancel"]
+          },
+          {
+            "id": "int-yes",
+            "text": "Execute action: yes",
+            "topic_id": "tpc-global",
+            "topic_title": "Global",
+            "topic_desc": "This topic is about general questions and answers that a user can ask",
+            "subtopic_id": "base-intents",
+            "subtopic_title": "Base Intents",
+            "subtopic_desc": "Base actions the user can do with the chatbot",
+            "attachments": ["intent://int-yes"]
+          },
+          {
+            "id": "int-no",
+            "text": "Execute action: no",
+            "topic_id": "tpc-global",
+            "topic_title": "Global",
+            "topic_desc": "This topic is about general questions and answers that a user can ask",
+            "subtopic_id": "base-intents",
+            "subtopic_title": "Base Intents",
+            "subtopic_desc": "Base actions the user can do with the chatbot",
+            "attachments": ["intent://int-no"]
+          }
+        ],
+        "elected_facts": [
+          {
+            "id": "int-9bb52060a6",
+            "text": "Execute action: call_later",
+            "topic_id": "tpc-global",
+            "topic_title": "Global",
+            "topic_desc": "This topic is about general questions and answers that a user can ask",
+            "subtopic_id": "base-intents",
+            "subtopic_title": "Base Intents",
+            "subtopic_desc": "Base actions the user can do with the chatbot",
+            "attachments": ["intent://int-9bb52060a6"],
+            "confidence": 0.9920293143506003
+          }
+        ],
+        "entities": [],
+        "ms": 389
+      },
+      "integration": "telegramtest",
+      "tags": {
+        "message": { "telegramtest:id": "197" },
+        "conversation": { "telegramtest:id": "6035673625" },
+        "user": { "telegramtest:id": "6035673625" }
+      }
+    }
+  }
+]
