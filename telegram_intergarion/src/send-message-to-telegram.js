@@ -4,7 +4,7 @@ const getUuidByString = require("uuid-by-string");
 const { Client } = require("@botpress/client");
 const { randomUUID } = require("crypto");
 
-const API_BASE = "https://sour-badgers-dream.loca.lt";
+const API_BASE = "https://deep-pianos-behave.loca.lt";
 const telegraf = new Telegraf("6875692446:AAGbeU9IpGw06dcgf8L1M8mXOFBnBYQKt-I");
 
 const botpressClient = new Client({
@@ -69,9 +69,9 @@ const sendMessage = async (user) => {
     // userId: "b446dfd9-90a3-46bd-912f-0a77f270ba3e",
     userId: "0e797e81-eebc-4785-88bd-3a4e0de6ac9b",
     conversationId: "5bececa5-632a-4b2a-85a8-e379d546ad63",
-    payload: { text: "remind me" },
+    payload: { text: "@getBackToWork" },
     // schedule: { dateTime: currentDate.toISOString() },
-    schedule: { delay: 3000 },
+    // schedule: { delay: 3000 },
     tags: { "telegramtest:id": "" },
   });
 

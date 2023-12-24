@@ -2,25 +2,25 @@
   {
     "id": "0e797e81-eebc-4785-88bd-3a4e0de6ac9b",
     "conversationId": "5bececa5-632a-4b2a-85a8-e379d546ad63",
-    "remindAt": "2023-12-23T16:49:20.537Z",
+    "remindAt": "2023-12-24T19:34:37.839Z",
     "botToken": "b13d5719-396e-4c6c-998c-f19d25457c4b",
     "all": {
-      "id": "68b6607c-cf4c-4e03-bcb1-a1e834aee0a4",
+      "id": "2485bdab-1f51-4369-8005-eabe6b7900ae",
       "type": "text",
       "channel": "group",
       "userId": "0e797e81-eebc-4785-88bd-3a4e0de6ac9b",
       "direction": "incoming",
-      "payload": { "text": "remind me in 2 hours" },
+      "payload": { "text": "remind m3 in 2 hours" },
       "botId": "b13d5719-396e-4c6c-998c-f19d25457c4b",
-      "createdOn": "2023-12-23T14:49:19.706Z",
+      "createdOn": "2023-12-24T17:34:36.548Z",
       "conversationId": "5bececa5-632a-4b2a-85a8-e379d546ad63",
-      "preview": "remind me in 2 hours",
+      "preview": "remind m3 in 2 hours",
       "state": {
         "__stacktrace": [
           {
             "flow": "wf-89c5354646",
             "node": "nd-11f13f5b48",
-            "card": "ins-f99b719c99"
+            "card": "ins-52f0d70d8a"
           }
         ],
         "context": {
@@ -57,119 +57,110 @@
         "session": {
           "workflows_executions": [
             {
-              "execution_id": "731b5411-7fd1-4ec5-a84f-7d4ee355bf74",
+              "execution_id": "5b634e99-46c0-4dd8-bc7c-38e7897d7f97",
               "caller": { "type": "entry" },
-              "started_at": "2023-12-22T16:43:50.545Z",
+              "started_at": "2023-12-24T17:32:06.086Z",
               "variable_values": { "response": "" },
               "workflow_id": "wf-main"
             },
             {
               "workflow_id": "wf-89c5354646",
               "variable_values": {
-                "response": "you understand and you will remind him in the time he wanted"
+                "response": "You understand and you will be reminded in 2 hours"
               },
               "caller": {
                 "type": "workflow",
-                "execution_id": "731b5411-7fd1-4ec5-a84f-7d4ee355bf74"
+                "execution_id": "5b634e99-46c0-4dd8-bc7c-38e7897d7f97"
               },
-              "execution_id": "8952f603-e53b-40ce-9d81-35b219acf755",
-              "started_at": "2023-12-22T16:43:51.698Z"
+              "execution_id": "3c7fb32e-066b-47f6-95db-94d337283cbd",
+              "started_at": "2023-12-24T17:32:06.946Z"
             }
           ],
+          "current_execution_id": "3c7fb32e-066b-47f6-95db-94d337283cbd",
           "current_workflow": {
             "workflow_id": "wf-89c5354646",
             "variable_values": {
-              "response": "you understand and you will remind him in the time he wanted"
+              "response": "You understand and you will be reminded in 2 hours"
             },
             "caller": {
               "type": "workflow",
-              "execution_id": "731b5411-7fd1-4ec5-a84f-7d4ee355bf74"
+              "execution_id": "5b634e99-46c0-4dd8-bc7c-38e7897d7f97"
             },
-            "execution_id": "8952f603-e53b-40ce-9d81-35b219acf755",
-            "started_at": "2023-12-22T16:43:51.698Z"
+            "execution_id": "3c7fb32e-066b-47f6-95db-94d337283cbd",
+            "started_at": "2023-12-24T17:32:06.946Z"
           },
           "history": [
             {
-              "id": "a75ad985-0a88-4633-922f-7f6610937825",
-              "sender": "bot",
-              "confidence": 1,
-              "date": "2023-12-23T14:36:14.390Z",
-              "type": "text",
-              "preview": "Great! Let's get started on creating the document. ",
-              "options": []
-            },
-            {
-              "id": "319a0959-b6d7-4c8d-905f-58a0cee7f21c",
+              "id": "1356cc54-8a39-4c16-a619-bd14d3f38ab7",
               "sender": "user",
-              "date": "2023-12-23T14:37:38.408Z",
-              "preview": "hello",
-              "type": "text"
-            },
-            {
-              "id": "dbc1e2e4-9460-4501-a844-43be118a7318",
-              "sender": "bot",
-              "confidence": 1,
-              "date": "2023-12-23T14:37:39.950Z",
-              "type": "text",
-              "preview": "Great! Let's get started on creating the document. ",
-              "options": []
-            },
-            {
-              "id": "c4d6d98e-66bb-45ce-bedb-f532e7f5b197",
-              "sender": "user",
-              "date": "2023-12-23T14:49:06.710Z",
+              "date": "2023-12-24T17:32:06.104Z",
               "preview": "hi",
               "type": "text"
             },
             {
-              "id": "5c74ea84-041c-4acb-a618-9da8aecdc117",
+              "id": "2f886cb6-05d5-489a-be8f-4f75c5bf61cc",
               "sender": "bot",
               "confidence": 1,
-              "date": "2023-12-23T14:49:08.278Z",
+              "date": "2023-12-24T17:32:08.064Z",
               "type": "text",
               "preview": "Great! Let's get started on creating the document. ",
               "options": []
             },
             {
-              "id": "6249aed3-d64d-4bfa-84a9-3af67393a99d",
+              "id": "607f495f-ce1f-4d6a-a8ff-5c27286df72b",
               "sender": "user",
-              "date": "2023-12-23T14:49:19.707Z",
-              "preview": "remind me in 2 hours",
+              "date": "2023-12-24T17:34:30.294Z",
+              "preview": "hi",
               "type": "text"
             },
             {
-              "id": "2541973f-6af6-4b0c-978f-ee91495a168a",
+              "id": "f4150726-c0f7-48aa-b11a-48a72aa0f3fc",
               "sender": "bot",
               "confidence": 1,
-              "date": "2023-12-23T14:49:20.176Z",
+              "date": "2023-12-24T17:34:31.296Z",
+              "type": "text",
+              "preview": "Great! Let's get started on creating the document. ",
+              "options": []
+            },
+            {
+              "id": "84bb4bf2-0768-4052-8d80-756afc4cf4e0",
+              "sender": "user",
+              "date": "2023-12-24T17:34:36.549Z",
+              "preview": "remind m3 in 2 hours",
+              "type": "text"
+            },
+            {
+              "id": "9499c983-02b6-4ea6-b9f2-7b8995855acc",
+              "sender": "bot",
+              "confidence": 1,
+              "date": "2023-12-24T17:34:37.034Z",
               "type": "text",
               "preview": "changed to intent",
               "options": []
             }
-          ],
-          "current_execution_id": "8952f603-e53b-40ce-9d81-35b219acf755"
+          ]
         },
         "user": {
           "goal": "create a doc",
           "name": "",
-          "date": "2023-12-23T14:49:20.536Z",
-          "remindAt": "2023-12-23T16:49:20.537Z",
+          "date": "2023-12-24T17:34:37.838Z",
+          "remindAt": "2023-12-24T19:34:37.839Z",
           "minutesToRemind": 120
         },
-        "bot": { "api": "https://clever-spoons-greet.loca.lt" },
-        "configVariables": {},
+        "bot": {},
+        "configVariables": { "api": "https://deep-pianos-behave.loca.lt" },
         "agentVariables": {
           "SummaryAgent": {
             "bot": {},
             "conversation": {
-              "summary": "The user initiated the conversation by saying 'hi' and the bot responded by saying 'Great! Let's get started on creating the document.' The user requested a reminder in 2 hours, which the bot acknowledged and confirmed to understand.",
-              "transcript": "bot: Great! Let's get started on creating the document. \nuser: hello\nbot: Great! Let's get started on creating the document. \nuser: hello\nbot: Great! Let's get started on creating the document. \nuser: hello\nbot: Great! Let's get started on creating the document. \nuser: hi\nbot: Great! Let's get started on creating the document. \nuser: remind me in 2 hours\nbot: changed to intent\n"
+              "summary": "Great! Let's get started on creating the document. Hi.",
+              "transcript": "user: hi\nbot: Great! Let's get started on creating the document. \nuser: hi\nbot: Great! Let's get started on creating the document. \nuser: remind m3 in 2 hours\nbot: changed to intent\n"
             },
             "executions": {},
             "user": {},
             "turn": {
               "lines": [
-                "{\"sender\":\"user\",\"message\":\"remind me in 2 hours\"}",
+                "{\"sender\":\"user\",\"message\":\"remind m3 in 2 hours\"}",
                 "{\"sender\":\"bot\",\"message\":\"changed to intent\"}"
               ]
             }
@@ -183,7 +174,7 @@
           }
         }
       },
-      "messageId": "6249aed3-d64d-4bfa-84a9-3af67393a99d",
+      "messageId": "84bb4bf2-0768-4052-8d80-756afc4cf4e0",
       "flags": {},
       "nlu": {
         "errored": false,
@@ -199,7 +190,7 @@
             "subtopic_title": "Base Intents",
             "subtopic_desc": "Base actions the user can do with the chatbot",
             "attachments": ["intent://int-9bb52060a6"],
-            "confidence": 0.9920293143506003
+            "confidence": 0.9836003891434475
           }
         ],
         "top_facts": [
@@ -259,15 +250,15 @@
             "subtopic_title": "Base Intents",
             "subtopic_desc": "Base actions the user can do with the chatbot",
             "attachments": ["intent://int-9bb52060a6"],
-            "confidence": 0.9920293143506003
+            "confidence": 0.9836003891434475
           }
         ],
         "entities": [],
-        "ms": 389
+        "ms": 403
       },
       "integration": "telegramtest",
       "tags": {
-        "message": { "telegramtest:id": "197" },
+        "message": { "telegramtest:id": "209" },
         "conversation": { "telegramtest:id": "6035673625" },
         "user": { "telegramtest:id": "6035673625" }
       }
