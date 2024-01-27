@@ -4,7 +4,7 @@ const getUuidByString = require("uuid-by-string");
 const { Client } = require("@botpress/client");
 const { randomUUID } = require("crypto");
 
-const API_BASE = "https://deep-pianos-behave.loca.lt";
+const API_BASE = "https://olive-experts-ask.loca.lt";
 const telegraf = new Telegraf("6875692446:AAGbeU9IpGw06dcgf8L1M8mXOFBnBYQKt-I");
 
 const botpressClient = new Client({
